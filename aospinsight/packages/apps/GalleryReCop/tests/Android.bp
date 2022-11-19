@@ -1,0 +1,22 @@
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "packages_apps_Gallery_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    default_applicable_licenses: ["packages_apps_GalleryReCop_license"],
+}
+
+android_test {
+    name: "GalleryReCopTests",
+    certificate: "media",
+    libs: [
+        "android.test.runner",
+        "android.test.base",
+    ],
+    static_libs: ["junit"],
+    // Include all test java files.
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    instrumentation_for: "GalleryReCop",
+}
