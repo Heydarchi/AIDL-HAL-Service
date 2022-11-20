@@ -1,23 +1,23 @@
 cc_defaults{
     name: "aospinsight.hardware.dummy-defaults",
-   // shared_libs: ["aospinsight.hardware.dummy_device-V1-ndk_platform"],
     shared_libs: [
+        "aospinsight.hardware.dummy_device-V1-ndk",
         "libbase",
         "libbinder_ndk",
     ],
     vendor: true,
 }
 
-cc_library_static {
+/*cc_library_static {
     name: "aospinsight.hardware.dummy-lib",
     defaults: ["aospinsight.hardware.dummy-defaults"],
     srcs: [
-        "src/*.cpp",
+        "src/*",
     ],
     export_include_dirs: [
         "src/include",
     ],
-}
+}*/
 
 cc_binary {
     name: "dummy-service",
@@ -29,5 +29,5 @@ cc_binary {
     srcs: [
         "src/dummy_service_main.cpp",
     ],
-    static_libs: ["aospinsight.hardware.dummy-lib"]
+    //static_libs: ["aospinsight.hardware.dummy-lib"]
 }
