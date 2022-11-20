@@ -1,18 +1,23 @@
 #pragma once
 
-#include <aidl/android/vendor/aospinsight/hardware/dummy_device/BnDummy.h>
+#include <aidl/aospinsight/hardware/dummy_device/BnDummy.h>
 
 namespace aidl {
-namespace android {
+namespace aospinsight {
 namespace hardware {
 namespace dummy_device {
 
-class Dummy : public BnDummy {
-    ndk::ScopedAStatus getPacketByCallback(const shared_prt<IDummyCallback>& cb) override;
-    ndk::ScopedAStatus getPacket(std::shared_prt<DummyPacket>* dummyPacket) override;
+//package aospinsight.hardware.dummy_device;
+
+//using aidl::aospinsight::hardware::dummy_device::BnDummy;
+//using aidl::aospinsight::hardware::dummy_device::IDummyCallback;
+
+class DummyImpl : public BnDummy {
+    virtual ndk::ScopedAStatus getPacketByCallback(const std::shared_ptr<IDummyCallback>& cb) override;
+    virtual ndk::ScopedAStatus getPacket(DummyPacket* dummyPacket) override;
 };
 
 }  // namespace dummy_device
 }  // namespace hardware
-}  // namespace android
+}  // namespace aospinsight
 }  // namespace aidl
