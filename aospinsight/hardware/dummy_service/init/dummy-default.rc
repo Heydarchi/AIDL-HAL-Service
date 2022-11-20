@@ -1,0 +1,5 @@
+service dummy-service /vendor/bin/hw/dummy-service
+    class hal
+    user nobody
+    group nobody
+    shutdown critical

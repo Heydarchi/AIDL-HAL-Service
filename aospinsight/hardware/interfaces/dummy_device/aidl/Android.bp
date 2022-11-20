@@ -9,11 +9,5 @@ aidl_interface {
         },
     },
     owner: "AospInsight",
-
-    versions_with_info: [
-        {
-            version: "1",
-        },
-    ],
-
+    versions: ["1"],
 }
