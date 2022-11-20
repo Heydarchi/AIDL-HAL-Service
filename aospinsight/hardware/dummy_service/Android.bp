@@ -8,7 +8,7 @@ cc_defaults{
     vendor: true,
 }
 
-/*cc_library_static {
+cc_library_static {
     name: "aospinsight.hardware.dummy-lib",
     defaults: ["aospinsight.hardware.dummy-defaults"],
     srcs: [
@@ -17,7 +17,7 @@ cc_defaults{
     export_include_dirs: [
         "src/include",
     ],
-}*/
+}
 
 cc_binary {
     name: "dummy-service",
@@ -29,5 +29,5 @@ cc_binary {
     srcs: [
         "src/dummy_service_main.cpp",
     ],
-    //static_libs: ["aospinsight.hardware.dummy-lib"]
+    static_libs: ["aospinsight.hardware.dummy-lib"]
 }
