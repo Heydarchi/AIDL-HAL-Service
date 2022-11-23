@@ -5,15 +5,8 @@ aidl_interface {
     vendor_available: true,
     backend: {
         java: {
-            enabled: true,
             platform_apis: true,
         },
-        cpp: {
-            enabled: true,
-        },
-        ndk: {
-            enabled: true,
-        },        
     },
     owner: "AospInsight",
 
