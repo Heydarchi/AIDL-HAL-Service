@@ -1,0 +1,19 @@
+aidl_interface {
+    name: "aospinsight.hardware.dummy_device",
+    srcs: ["aospinsight/hardware/dummy_device/*.aidl"],
+    stability: "vintf",
+    vendor_available: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+    },
+    owner: "AospInsight",
+
+    versions_with_info: [
+        {
+            version: "1",
+        },
+    ],
+
+}
