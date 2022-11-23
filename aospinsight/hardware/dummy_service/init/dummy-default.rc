@@ -1,4 +1,5 @@
 service dummy-service /vendor/bin/hw/dummy-service
+    interface aidl aospinsight.hardware.dummy_device.IDummy/default
     class hal
     user nobody
     group nobody
