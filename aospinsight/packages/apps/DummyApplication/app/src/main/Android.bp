@@ -1,13 +1,13 @@
 
 android_app {
     name: "DummyApp",
+    certificate: "platform",
+    privileged: true,
     srcs: ["java/**/*.kt"],
     resource_dirs: [
         "res",
     ],
-    vendor: true,
-    sdk_version: "current",
-    certificate: "platform",
+    platform_apis: true,
     static_libs: [
         "androidx.core_core-ktx",
         "androidx.appcompat_appcompat",
@@ -15,7 +15,7 @@ android_app {
         "androidx-constraintlayout_constraintlayout",
         "androidx.navigation_navigation-fragment-ktx",
         "androidx.navigation_navigation-ui-ktx",
+        "aospinsight.hardware.dummy_device-V1-java",
     ],
     required: ["privapp-permissions-recop"],
-    privileged: true,
 }
