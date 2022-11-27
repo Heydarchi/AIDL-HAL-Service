@@ -1,0 +1,9 @@
+type hal_dummy_service_hwservice, hwservice_manager_type;
+
+hal_attribute(dummy_service)
+
+binder_call(hal_dummy_service_client, hal_dummy_service_server)
+binder_call(hal_dummy_service_server, hal_dummy_service_client)
+
+
+add_hwservice(hal_dummy_service_server, hal_dummy_service_hwservice)
