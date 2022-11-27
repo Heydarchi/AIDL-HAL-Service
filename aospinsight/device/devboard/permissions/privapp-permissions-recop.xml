@@ -1,0 +1,7 @@
+<permissions>
+    
+    <privapp-permissions package="com.example.dummyapplication">
+        <permission name="android.permission.INTERNET"/>
+    </privapp-permissions>
+    
+</permissions>

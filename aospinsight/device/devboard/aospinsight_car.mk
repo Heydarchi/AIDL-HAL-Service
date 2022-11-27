@@ -20,3 +20,4 @@ EMULATOR_VENDOR_NO_SENSORS := true
 PRODUCT_PACKAGES += \
 	dummy-service \
     GalleryReCop \
+	DummyApp \

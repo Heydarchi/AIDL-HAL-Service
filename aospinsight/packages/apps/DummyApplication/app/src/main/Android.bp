@@ -1,0 +1,21 @@
+
+android_app {
+    name: "DummyApp",
+    srcs: ["java/**/*.kt"],
+    resource_dirs: [
+        "res",
+    ],
+    vendor: true,
+    sdk_version: "current",
+    certificate: "platform",
+    static_libs: [
+        "androidx.core_core-ktx",
+        "androidx.appcompat_appcompat",
+        "com.google.android.material_material",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.navigation_navigation-fragment-ktx",
+        "androidx.navigation_navigation-ui-ktx",
+    ],
+    required: ["privapp-permissions-recop"],
+    privileged: true,
+}
