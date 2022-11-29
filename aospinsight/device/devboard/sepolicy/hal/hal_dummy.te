@@ -1,0 +1,13 @@
+#define dummy hal
+type hal_dummy_hwservice, hwservice_manager_type;
+
+hal_attribute(dummy)
+
+binder_call(hal_dummy_client, hal_dummy_server)
+binder_call(hal_dummy_server, hal_dummy_client)
+
+add_hwservice(hal_dummy_server, hal_dummy_hwservice)
+allow system_app hal_dummy_hwservice:hwservice_manager find;
+
+allow priv_app hal_dummy_hwservice:hwservice_manager find;
+allow priv_app dummy:binder { call transfer };

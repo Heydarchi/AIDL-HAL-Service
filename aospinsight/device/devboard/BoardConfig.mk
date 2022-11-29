@@ -1,8 +1,10 @@
 
-BOARD_SEPOLICY_DIRS += \
-        vendor/aospinsight/device/devboard/sepolicy/hal \
-        vendor/aospinsight/device/devboard/sepolicy/vnd \
-        vendor/aospinsight/device/devboard/sepolicy/app \
+#PRODUCT_PUBLIC_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/public 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/vendor 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/hal 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/service 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/daemon 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/app 
 
 #BOARD_SEPOLICY_UNION += \
 #        genfs_contexts \

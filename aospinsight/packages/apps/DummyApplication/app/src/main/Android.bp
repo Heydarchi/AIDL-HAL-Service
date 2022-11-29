@@ -2,7 +2,7 @@
 android_app {
     name: "DummyApp",
     certificate: "platform",
-    privileged: true,
+   // privileged: true,
     srcs: ["java/**/*.kt"],
     resource_dirs: [
         "res",

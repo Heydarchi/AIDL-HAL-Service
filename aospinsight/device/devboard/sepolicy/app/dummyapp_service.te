@@ -1,0 +1,27 @@
+# Rules for the aosp layer app/service dummyapp_service
+type dummyapp_service, domain;
+#vcc_trusted_app(dummyapp_service)
+app_domain(dummyapp_service)
+
+allow dummyapp_service activity_service:service_manager find;
+allow dummyapp_service netstats_service:service_manager find;
+allow dummyapp_service surfaceflinger_service:service_manager find;
+allow dummyapp_service audio_service:service_manager find;
+allow dummyapp_service content_capture_service:service_manager find;
+allow dummyapp_service game_service:service_manager find;
+allow dummyapp_service gpu_service:service_manager find;
+allow dummyapp_service hint_service:service_manager find;
+
+
+#allow dummyapp_service system_app_data_file:dir create_dir_perms;
+#allow dummyapp_service system_app_data_file:{ file lnk_file } create_file_perms;
+
+# Find and communicate with HAL components
+hal_client_domain(dummyapp_service, hal_dummy)
+
+net_domain(dummyapp_service)
+
+#allow dummyapp_service dummy_server_service:service_manager find;
+allow dummyapp_service radio_service:service_manager find;
+
+#allow zygote dummyapp_service:process dyntransition;
