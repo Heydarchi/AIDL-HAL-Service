@@ -1,0 +1,12 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>aospinsight.hardware.dummy_device</name>
+        <version>1</version>
+        <interface>
+        	<name>IDummy</name>
+        	<instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
+
+
