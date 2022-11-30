@@ -16,12 +16,13 @@ class MainActivity : AppCompatActivity() {
 
     private var binder: IBinder? = null
     private lateinit var iDummy: IDummy
+    private val idummyCallback = DummyCallbackImpl()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("isExternalStorageReadOnly", " :" + isExternalStorageReadOnly())
-        Log.d("isExternalStorageAvailable", " :" + isExternalStorageAvailable())
+        Log.d(LOG, " :" + isExternalStorageReadOnly())
+        Log.d(LOG, " :" + isExternalStorageAvailable())
         getAidlInterface()
     }
 
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             iDummy?.let{
                 Log.d(LOG, "DummyApp is bound to dummy_service")
                 iDummy.getPacket(DummyPacket())
+                iDummy.getPacketByCallback(idummyCallback);
             }
         }
     }
