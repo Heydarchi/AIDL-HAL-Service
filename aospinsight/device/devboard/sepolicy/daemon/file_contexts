@@ -1,0 +1,2 @@
+# HAL dummy_service
+/vendor/bin/hw/dummy-service u:object_r:dummy_exec:s0
