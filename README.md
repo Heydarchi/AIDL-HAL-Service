@@ -12,8 +12,9 @@ Article:
 Article :
 [How to implement the AIDL interface](https://aospinsight.com/how-to-implement-the-aidl-interface/) <br/>
 
-#### - Implement A HAL service(daemon) based on the AIDL interface --> Not merged !!  
- <br/>
+#### - Implement A HAL service(daemon) based on the AIDL interface --> Merged
+Article :
+[How To Add An AIDL HAL Service (daemon)](https://aospinsight.com/how-to-add-an-aidl-hal-service-daemon/) <br/>
 
 #### - Develop an application communicating through the AIDL interface with the HAL service(daemon)   --> Not merged !! 
 
