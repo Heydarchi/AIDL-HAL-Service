@@ -1,0 +1,23 @@
+# dummy HAL service daemon
+type dummy, domain;
+type dummy_exec, exec_type, file_type, vendor_file_type;
+typeattribute dummy hal_automotive_socket_exemption;
+init_daemon_domain(dummy)
+
+# Allow some/ip communication via central router
+#someip_domain(dummy)
+
+# Basic networking permissions
+net_domain(dummy)
+
+#dummy SOME/IP server binder interface
+vndbinder_use(dummy);
+#add_service(dummy, dummy_server_service);
+#allow dummy dummy_server_service:service_manager find;
+
+# Find and communicate with hwservicemanager
+binder_call(dummy, hwservicemanager)
+
+hal_server_domain(dummy, hal_dummy)
+
+allow dummy servicemanager:binder { call transfer };
