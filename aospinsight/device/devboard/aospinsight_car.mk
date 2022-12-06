@@ -6,6 +6,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_x86_64.mk)
 include vendor/aospinsight/device/devboard//BoardConfig.mk
 
 
+include vendor/aospinsight/device/devboard//BoardConfig.mk
+
 EMULATOR_VENDOR_NO_SOUND := true
 PRODUCT_NAME := aosp_car_x86_64
 PRODUCT_DEVICE := generic_car_x86_64
@@ -14,8 +16,7 @@ PRODUCT_MODEL := AOSPInsight Car on x86_64 emulator
 
 EMULATOR_VENDOR_NO_SENSORS := true
 
-
-
 PRODUCT_PACKAGES += \
 	dummy-service \
 	DummyApp \
+

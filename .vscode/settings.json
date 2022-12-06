@@ -3,5 +3,6 @@
         "mutex": "cpp",
         "vndservice_contexts": "cpp",
         "thread": "cpp"
+        "vndservice_contexts": "cpp"
     }
 }

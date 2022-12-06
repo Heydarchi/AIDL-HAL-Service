@@ -2,3 +2,4 @@ type dummy_server_service, hal_service_type, protected_service, service_manager_
 
 allow dummy dummy_server_service:service_manager add;
 allow dummyapp_service dummy_server_service:service_manager find;
+
