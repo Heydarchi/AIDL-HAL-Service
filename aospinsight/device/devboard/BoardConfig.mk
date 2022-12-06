@@ -1,9 +1,9 @@
 
-BOARD_SEPOLICY_DIRS += \
-		vendor/aospinsight/device/devboard/sepolicy/vendor \
-		vendor/aospinsight/device/devboard/sepolicy/service \
-		vendor/aospinsight/device/devboard/sepolicy/hal \
-		vendor/aospinsight/device/devboard/sepolicy/daemon \
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/vendor 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/hal 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/service 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/daemon 
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/aospinsight/device/devboard/sepolicy/app 
 
 
 ########## Device Manifest & Framework Compatibility Matrix Manifest ##########

@@ -1,0 +1,19 @@
+# Rules for the aosp layer app/service dummyapp_service
+type dummyapp_service, domain;
+app_domain(dummyapp_service)
+
+allow dummyapp_service activity_service:service_manager find;
+allow dummyapp_service netstats_service:service_manager find;
+allow dummyapp_service surfaceflinger_service:service_manager find;
+allow dummyapp_service audio_service:service_manager find;
+allow dummyapp_service content_capture_service:service_manager find;
+allow dummyapp_service game_service:service_manager find;
+allow dummyapp_service gpu_service:service_manager find;
+allow dummyapp_service hint_service:service_manager find;
+
+# Find and communicate with HAL components
+hal_client_domain(dummyapp_service, hal_dummy)
+
+net_domain(dummyapp_service)
+
+allow dummyapp_service radio_service:service_manager find;
