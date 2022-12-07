@@ -16,7 +16,7 @@ Article :
 Article :
 [How To Add An AIDL HAL Service (daemon)](https://aospinsight.com/how-to-add-an-aidl-hal-service-daemon/) <br/>
 
-#### - Develop an application communicating through the AIDL interface with the HAL service(daemon)   --> Not merged !! 
+#### - Develop an application communicating through the AIDL interface with the HAL service(daemon)   --> Merged  
 
  <br/>
 
