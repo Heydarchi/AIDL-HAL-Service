@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d(LOG, " :" + isExternalStorageReadOnly())
-        Log.d(LOG, " :" + isExternalStorageAvailable())
+        //Log.d(LOG, " :" + isExternalStorageReadOnly())
+        //Log.d(LOG, " :" + isExternalStorageAvailable())
+
+        //Init the interface and register the callback to the daemon
         getAidlInterface()
     }
 
@@ -46,11 +48,9 @@ class MainActivity : AppCompatActivity() {
         binder = ServiceManager.getService(HAL_AIDL_SERVICE_NAME)
         binder?.let{
             iDummy = IDummy.Stub.asInterface(binder)
-            iDummy?.let{
-                Log.d(LOG, "DummyApp is bound to dummy_service")
-                iDummy.getPacket(DummyPacket())
-                iDummy.getPacketByCallback(idummyCallback);
-            }
+            Log.d(LOG, "DummyApp is bound to dummy_service")
+            iDummy.getPacket(DummyPacket())
+            iDummy.getPacketByCallback(idummyCallback);
         }
     }
 

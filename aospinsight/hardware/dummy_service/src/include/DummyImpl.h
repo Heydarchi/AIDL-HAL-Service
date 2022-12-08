@@ -8,10 +8,6 @@ namespace aospinsight {
 namespace hardware {
 namespace dummy_device {
 
-//package aospinsight.hardware.dummy_device;
-
-//using aidl::aospinsight::hardware::dummy_device::BnDummy;
-//using aidl::aospinsight::hardware::dummy_device::IDummyCallback;
 
 class DummyImpl : public BnDummy {
     virtual ndk::ScopedAStatus getPacketByCallback(const std::shared_ptr<IDummyCallback>& cb) override;
@@ -20,6 +16,9 @@ class DummyImpl : public BnDummy {
 protected:
     std::shared_ptr<IDummyCallback> dummyCallback = nullptr;
     std::mutex dummyMutex;
+
+    ::ndk::ScopedAIBinder_DeathRecipient death_recipient_;
+    static void binderDiedCallbackAidl(void* cookie_ptr);
 
     void onPacketEvent(DummyPacket* dummyPacket);
 };

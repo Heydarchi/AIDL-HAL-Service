@@ -7,7 +7,7 @@ import android.util.Log
 class DummyCallbackImpl : IDummyCallback.Stub() {
 
     override fun onGetPacket(dummyPacket : DummyPacket){
-        Log.d(LOG, "A new DummyPacke received in onGetPacket !!!")
+        Log.d(LOG, "A new DummyPacket received in onGetPacket !!!")
         Log.d(LOG, " id:" + dummyPacket.id)
         Log.d(LOG, " msg:" + dummyPacket.msg)
 
