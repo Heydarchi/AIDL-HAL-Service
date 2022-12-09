@@ -49,8 +49,10 @@ class MainActivity : AppCompatActivity() {
         binder?.let{
             iDummy = IDummy.Stub.asInterface(binder)
             Log.d(LOG, "DummyApp is bound to dummy_service")
-            iDummy.getPacket(DummyPacket())
+            Log.d(LOG, "Register the callback by invoking getPacketByCallback from dummy-service")
             iDummy.getPacketByCallback(idummyCallback);
+            Log.d(LOG, "Invoking getPacket from dummy-service")
+            iDummy.getPacket(DummyPacket())
         }
     }
 

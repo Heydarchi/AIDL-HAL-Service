@@ -27,6 +27,16 @@ Article :
 [How to build AOSP](https://aospinsight.com/how-to-build-aosp/)
 
 
+## Screenshots
+
+![App Icon in the emulator](screenshots/AppInEmulator.png)
+
+![App is running](screenshots/AppIsRunning.png)
+
+![Logs from Logcat before running the app](screenshots/LogcatBeforeRunningApp.png)
+
+![Logs from Logcat after running the app](screenshots/LogcatAfterRunningApp.png)
+
 
 ## TODO
 
@@ -45,8 +55,8 @@ Tasks related to new content.
 
 ### Docs
 
-- [ ] Add [AospInsigth](www.AospInsight.com) post links
-- [ ] Add screenshots
+- [X] Add [AospInsigth](www.AospInsight.com) post links
+- [X] Add screenshots
 - [ ] Add the Project structure
 - [ ] Explain the Binder structure
 - [ ] Explain the different Binders in AOSP
