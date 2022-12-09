@@ -25,3 +25,29 @@ Article :
 
 #### If you havn't cloned and set up AOSP locally you can read the article below:
 [How to build AOSP](https://aospinsight.com/how-to-build-aosp/)
+
+
+
+## TODO
+
+
+### Implementation
+
+Tasks related to new content.
+
+- [X] Implment a damon with C++ 
+- [X] Implment an Android app 
+- [X] Add SELinux policies 
+- [X] Add required build configurations
+- [X] Add linkToDeath mechanism
+- [ ] Implment a new damon with Rust 
+
+
+### Docs
+
+- [ ] Add [AospInsigth](www.AospInsight.com) post links
+- [ ] Add screenshots
+- [ ] Add the Project structure
+- [ ] Explain the Binder structure
+- [ ] Explain the different Binders in AOSP
+
