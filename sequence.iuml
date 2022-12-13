@@ -1,0 +1,10 @@
+@startuml
+
+"dummy-service" -> "Service Manager" : Add new service
+
+"Service Manager" <- "DummyApp" : Get a binder from the service
+
+"DummyApp" -> "dummy-service" : Register the callback
+"dummy-service" -> "DummyApp" : Invoke a remote method from the registered callback
+
+@enduml
