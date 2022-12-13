@@ -40,7 +40,11 @@ Article :
 
 ## TODO
 
+ ![Diagram Image Link](./class_diagram.iuml)  
 
+ ![Sequence Image Link](./sequence.iuml)  
+
+ 
 ### Implementation
 
 Tasks related to new content.
