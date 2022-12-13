@@ -1,0 +1,10 @@
+@startuml
+
+BnDummy <|--- DummyImpl 
+DummyImpl ---|> "main"
+
+MainActivity ---|> DummyCallbackImpl
+DummyCallbackImpl ---|> IDummyCallback
+DummyCallbackImpl ---|> IDummy
+
+@enduml
