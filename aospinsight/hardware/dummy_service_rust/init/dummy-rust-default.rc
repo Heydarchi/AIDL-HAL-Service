@@ -1,0 +1,6 @@
+service dummy-service /vendor/bin/hw/dummy-service-rust
+    interface aidl aospinsight.hardware.dummy_device.IDummy/2
+    class hal
+    user nobody
+    group nobody
+    shutdown critical

@@ -1,0 +1,20 @@
+rust_defaults{
+    name: "aospinsight.hardware.dummy-rust",
+    rustlibs: [
+        "aospinsight.hardware.dummy_device-V2-rust",
+        "libbinder_rs",
+    ],
+    vendor: true,
+}
+
+rust_binary {
+    name: "dummy-service-rust",
+    defaults: ["aospinsight.hardware.dummy-rust"],
+    srcs: [
+        "src/dummy_service_rust.rs"
+    ],
+    relative_install_path: "hw",
+    init_rc: ["init/dummy-rust-default.rc"],
+    vintf_fragments: ["manifest/dummy_rust_device_manifest.xml"],
+    vendor: true,
+}

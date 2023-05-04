@@ -1,0 +1,11 @@
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl">
+        <name>aospinsight.hardware.dummy_device</name>
+        <version>1</version>
+        <interface>
+        	<name>IDummy</name>
+        	<instance>default</instance>
+            <version>2</version>
+        </interface>
+    </hal>
+</compatibility-matrix>
