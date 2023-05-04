@@ -5,6 +5,7 @@
         <interface>
         	<name>IDummy</name>
         	<instance>default</instance>
+            <version>1</version>
         </interface>
     </hal>
 </manifest>
