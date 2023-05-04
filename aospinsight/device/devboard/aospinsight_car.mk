@@ -1,9 +1,9 @@
-PRODUCT_PACKAGE_OVERLAYS := vendor/recop/device/recop_emulator/common/overlay
+PRODUCT_PACKAGE_OVERLAYS := vendor/aospinsight/device/recop_emulator/common/overlay
 
 $(call inherit-product, device/generic/car/emulator/aosp_car_emulator.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_x86_64.mk)
 
-include vendor/aospinsight/device/devboard//BoardConfig.mk
+include vendor/aospinsight/device/devboard/BoardConfig.mk
 
 
 EMULATOR_VENDOR_NO_SOUND := true
@@ -17,4 +17,4 @@ EMULATOR_VENDOR_NO_SENSORS := true
 PRODUCT_PACKAGES += \
 	dummy-service \
 	DummyApp \
-
+	dummy-service-rust \
