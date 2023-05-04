@@ -12,3 +12,8 @@ VENDOR_PATH = vendor/aospinsight
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 	$(VENDOR_PATH)/hardware/dummy_service/manifest/dummy_framework_compatibility_matrix.xml \
+
+# Override BOARD_SUPER_PARTITION_SIZE to inclease the mounted system partition.
+BOARD_SUPER_PARTITION_SIZE := 6856296960
+
+BOARD_EMULATOR_DYNAMIC_PARTITIONS_SIZE = 3489660928

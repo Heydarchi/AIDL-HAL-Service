@@ -1,11 +1,13 @@
-<compatibility-matrix version="1.0" type="framework">
+<manifest version="1.0" type="device">
     <hal format="aidl">
         <name>aospinsight.hardware.dummy_device</name>
         <version>1</version>
         <interface>
         	<name>IDummy</name>
         	<instance>default</instance>
-            <version>1</version>
+            <version>2</version>
         </interface>
     </hal>
-</compatibility-matrix>
+</manifest>
+
+
