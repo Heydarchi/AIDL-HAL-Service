@@ -6,6 +6,10 @@ cc_defaults{
         "libbinder_ndk",
     ],
     vendor: true,
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
 }
 
 cc_library_static {
