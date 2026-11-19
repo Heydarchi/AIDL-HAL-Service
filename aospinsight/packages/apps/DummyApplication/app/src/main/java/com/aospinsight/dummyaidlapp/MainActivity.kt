@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getAidlInterface(){
-        binder = ServiceManager.getService(HAL_AIDL_SERVICE_NAME)
+        binder = ServiceManager.waitForDeclaredService(HAL_AIDL_SERVICE_NAME)
         binder?.let{
             iDummy = IDummy.Stub.asInterface(binder)
             Log.d(LOG, "DummyApp is bound to dummy_service")

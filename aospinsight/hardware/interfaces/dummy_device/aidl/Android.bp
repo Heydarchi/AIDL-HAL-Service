@@ -9,5 +9,11 @@ aidl_interface {
         },
     },
     owner: "AospInsight",
-    versions: ["1"],
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
 }
