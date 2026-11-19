@@ -1,13 +1,9 @@
-#define dummy hal
-type hal_dummy_hwservice, hwservice_manager_type;
-
+# Dummy AIDL HAL
 hal_attribute(dummy)
 
 binder_call(hal_dummy_client, hal_dummy_server)
 binder_call(hal_dummy_server, hal_dummy_client)
 
-add_hwservice(hal_dummy_server, hal_dummy_hwservice)
-allow system_app hal_dummy_hwservice:hwservice_manager find;
-
-allow priv_app hal_dummy_hwservice:hwservice_manager find;
-allow priv_app dummy:binder { call transfer };
+# System apps use the HAL
+hal_client_domain(system_app, hal_dummy)
+hal_client_domain(priv_app, hal_dummy)

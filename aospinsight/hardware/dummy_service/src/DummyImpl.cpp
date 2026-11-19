@@ -26,13 +26,14 @@ ndk::ScopedAStatus DummyImpl::getPacketByCallback(const std::shared_ptr<IDummyCa
         binder_status_t linkRet =
                 AIBinder_linkToDeath(dummyCallback->asBinder().get(), death_recipient_.get(), this);
         if (linkRet != ::STATUS_OK) {
-            LOG(INFO) <<"!!!!  Cannot link to death: %d  !!!!" << linkRet;
-            return ndk::ScopedAStatus::fromExceptionCodeWithMessage(EX_NULL_POINTER, "Couldn't link to death !!");
+            LOG(ERROR) << "Cannot link to death: " << linkRet;
+            dummyCallback = nullptr;
+            return ndk::ScopedAStatus::fromExceptionCodeWithMessage(EX_ILLEGAL_STATE, "Couldn't link to death !!");
         }
 
     }
     else{
-        return ndk::ScopedAStatus::fromExceptionCodeWithMessage(EX_NULL_POINTER, "Re-initializing the callback is forbiden!!");
+        return ndk::ScopedAStatus::fromExceptionCodeWithMessage(EX_ILLEGAL_STATE, "Re-initializing the callback is forbidden!!");
     }
 
     LOG(INFO) << "The callback is registered successfully !";

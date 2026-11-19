@@ -2,5 +2,6 @@
 prebuilt_etc {
     name: "privapp-permissions-recop",
     src: "privapp-permissions-recop.xml",
+    sub_dir: "permissions",
     filename_from_src: true,
 }
