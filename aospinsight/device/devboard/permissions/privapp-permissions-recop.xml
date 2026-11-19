@@ -1,6 +1,6 @@
 <permissions>
     
-    <privapp-permissions package="com.example.dummyapplication">
+    <privapp-permissions package="com.aospinsight.dummyaidlapp">
         <permission name="android.permission.INTERNET"/>
     </privapp-permissions>
     
